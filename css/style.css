@@ -8,12 +8,13 @@
 }
 
 #mid {
-    width: 100vh;
+    width: 110vh;
     height: 120vh;
     background-color: rgb(0, 0, 0);
    
     text-align: center;
-    margin: auto
+    margin: auto;
+    font-size: 100px;
   }
   header {
     
@@ -23,11 +24,14 @@
     width: 100%;
     height: 6vh;
     background-color: rgb(211, 106, 35);
+    position: sticky;
+    top:0
     
   }
   nav {
     
     width: 100%;
+   
     
   }
   /*Top text*/
@@ -35,8 +39,9 @@
     font-size: 220%;
     color:white ;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    float:right;
+    
   }
+
   .s {
     
 
@@ -55,6 +60,10 @@
     background-color:#383838;
     z-index: 9;
     text-align: left;
+  }
+  footer {
+    height: 80px;
+    background-color: #181818;
   }
 
  
