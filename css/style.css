@@ -6,6 +6,24 @@
     text-decoration:none;
     font-family:Arial, Helvetica, sans-serif
 }
+.btn {
+  background-color: rgb(211, 106, 35);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 24px;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+a, a:visited{
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgb(175, 88, 30);
+  color: white;
+}
 
 #mid {
     width: 110vh;
@@ -15,6 +33,9 @@
     text-align: center;
     margin: auto;
     font-size: 70px;
+  }
+  .placeholder {
+  display: none;
   }
   header {
     
@@ -73,39 +94,23 @@
     max-width: 60%;
     height: auto;
   }
-  @media only screen and (max-width: 1245px) {
-    nav > a {
-      display:none;
+  @media only screen and (max-width: 1475px) {
+    .placeholder {
+      width: 200px;
+      height: 10px;
+      
+      display: block;
     }
     nav {
-    
-     text-align: center;
-    
+      text-align: center;
      
-      
-    }
-    .more {
-      float: left;
-      display:block;
-      
-    }
-    #m {
-      height: 5.5vh;
-      max-width: 20vw;
-      
-    }
-    #s {
-      
-      height:17.5vh;
-      width: 10vw;
-      color: transparent; 
-      background-color: transparent; 
-      border-color: transparent; 
-    }
+     }
+  }
+  
    
 
-  }
-  @media only screen and (max-width: 889px) {
+  
+  @media only screen and (max-width: 936px) {
     #mid {
       width: 100%;
       height: 120vh;
@@ -113,8 +118,17 @@
       
       
     }
+    .placeholder {
+      width: 200px;
+      height: 10px;
+      
+      display: block;
+    }
+    .btn {
+     display: none;
+    }
+    
     
   }
   
     
-  
