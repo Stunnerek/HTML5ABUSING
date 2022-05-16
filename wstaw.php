@@ -1,27 +1,27 @@
 
     <?php
-      $nr = trim($_POST['nr']);
+      $id = trim($_POST['id']);
       $imie = trim($_POST['imie']);
       $nazwisko = trim($_POST['nazwisko']);
-      $grupa = trim($_POST['grupa']);
-      if (!$nr || !$imie || !$nazwisko || !$grupa)
+      $pseudonim = trim($_POST['pseudonim']);
+      if (!$id || !$imie || !$nazwisko || !$pseudonim)
       {
-        echo 'Brak wszystkich danych, wróć do poprzedniej strony i spóbuj ponownie!';
+        echo 'Brak wszystkich danych, wróć do poprzedniej strony i spróbuj ponownie!';
         exit;
       }
-     $db = new mysqli('localhost','root','','klasa');
+     $db = new mysqli('localhost','root','','ston');
       
       if (mysqli_connect_errno())
       {
-        echo 'Połączenie z bazą nie powiodło się. Spóbuj ponownie';
+        echo 'Połączenie z bazą nie powiodło się. Spróbuj ponownie';
         exit;
       }
-      $zapytanie = "insert into klasa values ('".$nr."', '".$imie."', '".$nazwisko."', '".$grupa."')";
+      $zapytanie = "insert into formularz values ('".$id."', '".$imie."', '".$nazwisko."', '".$pseudonim."')";
       $wynik = $db->query($zapytanie);
-      if ($wynik) echo 'Dodano: ' .$db->affected_rows. 'ucznia do klasy o imieniu: '.$imie;
+      if ($wynik) echo 'Dodano: ' .$db->affected_rows. 'd '.$imie;
     ?> 
 	<?php
-	 $baza=new mysqli('localhost','root','','klasa');
+	 $baza=new mysqli('localhost','root','','ston');
 	if ($wynik=$baza->query('SELECT imie,nazwisko FROM klasa'))
 	{
 		echo "Lista czytelników: <br>\n";
